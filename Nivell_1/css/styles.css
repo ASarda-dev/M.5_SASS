@@ -5,6 +5,11 @@ body, ul, li {
   font: 200 1em/1.5em "Exo 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+img {
+  margin: 20px;
+  border: 2px solid black;
+}
+
 #main-wrapper {
   position: relative;
   min-height: 100vh;
@@ -34,7 +39,7 @@ header nav li a {
 }
 
 main {
-  margin: 20px 0 0;
+  margin: 20px 10px 0;
   padding-bottom: 20px;
 }
 
@@ -55,9 +60,5 @@ footer li a img {
   width: 30px;
   border-radius: 50%;
   overflow: hidden;
-}
-
-footer img {
-  margin: 20px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,45 @@
+@mixin strips {
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  justify-content: center;
+
+}
+
+
+@mixin keyframes {
+    @keyframes strip--u4rx9pe {
+        from {
+          transform: translate3d(-100%, 0, 0);
+        }
+      }
+      @keyframes strip--u4rx9pg {
+        from {
+          transform: translate3d(0, 100%, 0);
+        }
+      }
+      @keyframes strip--u4rx9q8 {
+        from {
+          transform: translate3d(0, -100%, 0);
+        }
+      }
+    @keyframes strip--u4rx9qn {
+        from {
+          transform: translate3d(0, 100%, 0);
+        }
+      }
+    @keyframes strip--u4rx9r0 {
+        from {
+          transform: translate3d(100%, 0, 0);
+        }
+      }
+
+} 
+
+
+.strips {
+    @include strips;
+    @include keyframes;
+}

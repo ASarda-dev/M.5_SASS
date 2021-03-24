@@ -1,48 +1,57 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300&display=swap");
+
+@import "components/color";
+@import "components/mixins";
+
 /* general */
+$myFont: Lato;
+$myFontSize: 3.5vw;
+$myWidth: 100vw;
+$myHeight: 100vh;
+
 * {
   box-sizing: border-box;
-  margin: 20px;
 }
 
 body {
   margin: 10px 0 0 0;
+  font-size: $myFontSize;
+  font-weight: 300;
+  color: $myColor;
+  font-family: $myFont;
+
 }
 
-h1 {
-  font-size: 3.5vw;
-  font-weight: 300;
-  color: white;
-  font-family: "Lato";
-}
 
 /* strips */
 .strips {
-  height: 100vh;
-  width: 100vw;
+  height: $myHeight;
+  width: $myWidth;
   overflow: hidden;
   text-align: center;
   display: flex;
   cursor: pointer;
 }
+
 .strips .strip {
   position: relative;
   width: 19.9vw;
   margin: 0.1vw;
-  height: 100vh;
+  height: $myHeight;
   display: flex;
   text-align: center;
   overflow: hidden;
   align-items: center;
   justify-content: center;
 }
+
 .strips .strip .strip_content {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  height: 100vh;
-  width: 100%;
+  height: $myHeight;
+  width: $myWidth;
   text-align: center;
 }
 
@@ -57,7 +66,7 @@ h1 {
   top: 0;
   left: 0;
   width: 20vw;
-  height: 100vh;
+  height: $myHeight;
   background: white;
   opacity: 0.05;
   -webkit-transform-origin: center center;
@@ -67,6 +76,7 @@ h1 {
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
 }
+
 .strips .strip_content:hover:before {
   -webkit-transform: skew(0deg) scaleX(2) translate(0, 0);
   transform: skew(0deg) scaleX(2) translate(0, 0);
@@ -75,11 +85,12 @@ h1 {
 
 /* strips 1-5: nth-child 1-5 */
 .strip:nth-child(1) .strip_content {
-  background-color: #244F75;
+  background-color: $strip1;
   animation-name: strip--u4rx9pe;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
 }
+
 @keyframes strip--u4rx9pe {
   from {
     transform: translate3d(-100%, 0, 0);
@@ -87,11 +98,12 @@ h1 {
 }
 
 .strip:nth-child(2) .strip_content {
-  background-color: #60BFBF;
+  background-color: $strip2;
   animation-name: strip--u4rx9pg;
   animation-duration: 0.8s;
   animation-timing-function: ease-out;
 }
+
 @keyframes strip--u4rx9pg {
   from {
     transform: translate3d(0, 100%, 0);
@@ -99,11 +111,12 @@ h1 {
 }
 
 .strip:nth-child(3) .strip_content {
-  background-color: #8C4B7E;
+  background-color: $strip3;
   animation-name: strip--u4rx9q8;
   animation-duration: 0.7s;
   animation-timing-function: ease-out;
 }
+
 @keyframes strip--u4rx9q8 {
   from {
     transform: translate3d(0, -100%, 0);
@@ -111,11 +124,12 @@ h1 {
 }
 
 .strip:nth-child(4) .strip_content {
-  background-color: #F8BB44;
+  background-color: $strip4;
   animation-name: strip--u4rx9qn;
   animation-duration: 1s;
   animation-timing-function: ease-out;
 }
+
 @keyframes strip--u4rx9qn {
   from {
     transform: translate3d(0, 100%, 0);
@@ -123,11 +137,12 @@ h1 {
 }
 
 .strip:nth-child(5) .strip_content {
-  background-color: #F24B4B;
+  background-color: $strip5;
   animation-name: strip--u4rx9r0;
   animation-duration: 1.1s;
   animation-timing-function: ease-out;
 }
+
 @keyframes strip--u4rx9r0 {
   from {
     transform: translate3d(100%, 0, 0);
